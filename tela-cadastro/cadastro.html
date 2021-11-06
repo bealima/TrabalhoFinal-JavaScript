@@ -31,16 +31,19 @@
             <div class="birth-date-input">
                 <span>Data de Nasimento*</span>
                 <input type="date" id="data-nascimento-input-cadastro">
+                <span id="birth-date-cadastro-erro" style="display: none;"></span>
             </div>
 
             <div class="email-input">
                 <span>Email*</span>
                 <input type="email" id="email-input-cadastro">
+                <span id="email-cadastro-erro" style="display: none;"></span>
             </div>
 
             <div class="password-input">
                 <span>Senha*</span>
-                <input type="password" id="password-input-login">
+                <input type="password" id="password-input-cadastro">
+                <span id="senha-invalida-cadastro" style="display: none;"></span>
             </div>
         
             <div class="check-box">
@@ -56,6 +59,7 @@
         </form>
 
         <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/moment"></script>
         <script src="./cadastro.js"></script>
 </body>
 </html>
