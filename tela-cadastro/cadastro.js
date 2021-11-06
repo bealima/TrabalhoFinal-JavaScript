@@ -75,31 +75,43 @@ const cadastrarUsuario = () => {
     
 // }
 
+// let birthDate = moment('04-03-1998', 'DDMMYYYY').format('DD/MM/YYYY')
 
+// moment().diff(birthDate, 'years')
 
 // Validar data
 
-// const validarData = () => { 
-//     let inputData = document.getElementById('data-nascimento-input-cadastro');
-//     let dataDigitada = inputData.value;
+const validarData = () => { 
 
-//     adicionarMascaraData(inputData, dataDigitada);
+    // Problema aqui VVVVVV
+    let inputData = document.getElementById('data-nascimento-input-cadastro');
+    let conversor = moment(inputData.value, 'DD/MM/YYYY')
+    let dataDigitada = conversor.value;
+    //fim problema
 
-//     let dataConvertida = moment(dataDigitada, 'DDMMYYYY');
+    let dataConvertida = moment(dataDigitada, 'DDMMYYYY');
+    console.log(dataConvertida)
 
-//     let dezoitoAnosAtras = moment().diff(dataConvertida, 'years') >= 18;
+    let hoje = moment().format('DD/MM/YYYY')
 
-//     // comparações de data - date1.isBefore(date2)  /  date1.isAfter(date2)  /  date1.isSameOrBefore(date2)  /  date1.isSameOrAfter(date2)
-//     let dataAnteriorHoje = dataConvertida.isBefore(moment());
+    console.log(dataConvertida)
 
-//     let ehValido = dataConvertida.isValid() && dataAnteriorHoje && dezoitoAnosAtras && dataDigitada.length === 10; // 10/05/2001
+    let dezoitoAnosAtras = moment(hoje).diff(dataConvertida, 'years');
 
-//     // para setar o texto de erro em vermelho
-//     let erroData = document.getElementById('birth-date-cadastro-erro');
-//     erroData.setAttribute('style', ehValido ? 'display: none' : 'color: red');
+    console.log(dezoitoAnosAtras)
 
-//     return ehValido;
-// }
+    // comparações de data - date1.isBefore(date2)  /  date1.isAfter(date2)  /  date1.isSameOrBefore(date2)  /  date1.isSameOrAfter(date2)
+    // let dataAnteriorHoje = dataConvertida.isBefore(moment());
+
+    let ehValido = dezoitoAnosAtras; // 10/05/2001
+
+    // para setar o texto de erro em vermelho
+    let erroData = document.getElementById('birth-date-cadastro-erro');
+    erroData.setAttribute('style', ehValido ? 'display: none' : 'color: red');
+
+    return ehValido;
+}
+
 
 // Validar email
 const validarEmail = () => {
@@ -159,7 +171,7 @@ const validarSenha = () => {
 }
 
 const validarLogin = () => {
-    let cadastroValido =  validarEmail() && validarSenha();
+    let cadastroValido =  validarEmail() && validarSenha() && validarData() ;
     console.log(`Cadastro ${cadastroValido ? 'válido!' : 'inválido'}`);
 
     if(cadastroValido) {
