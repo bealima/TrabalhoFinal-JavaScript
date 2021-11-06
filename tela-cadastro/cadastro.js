@@ -1,27 +1,27 @@
 //#region OBJETOS
-    let candidato = { 
-        nomeCompleto: nomeCompletoInput.value,
-        dataNascimento: dataInput.value,
-        email: emailInput.value,
-        senha: senhaInput.value,
-    }
+    // let candidato = { 
+    //     nomeCompleto: nomeCompletoInput.value,
+    //     dataNascimento: dataInput.value,
+    //     email: emailInput.value,
+    //     senha: senhaInput.value,
+    // }
 
     let trabalhador = {
-        nome = '',
-        dataNascimento = '',
-        email = '',
-        senha = '',
-        primeiroEmprego = null,
-        tipoUsuario = '',
-        vagasCadastradas = [{id:0, rejeitado:false}]
+        nome : '',
+        dataNascimento : '',
+        email : '',
+        senha : '',
+        primeiroEmprego : null,
+        tipoUsuario : '',
+        vagasCadastradas : [{id:0, rejeitado:false}]
     }
 
     let vaga = {
-        titulo = '',
-        descricao = '',
-        remuneracao = '',
-        candidatos = [],
-        rejeitado = false
+        titulo : '',
+        descricao : '',
+        remuneracao : '',
+        candidatos : [],
+        rejeitado : false
     }
 //#endregion
 
@@ -34,32 +34,69 @@ const cadastrarUsuario = () => {
     let dataInput = document.getElementById('data-nascimento-input-cadastro');
     let emailInput = document.getElementById('email-input-cadastro');
     let senhaInput = document.getElementById('password-input-cadastro');
+    let checkbox = document.getElementById('checkbox');
+    if (checkbox.checked === true) {
+        checkbox.value = true;  
+    }
+    let select = document.getElementById('tipo-cadastro');
+     
+    let trabalhador = {
+        nome : nomeCompletoInput.value,
+        dataNascimento : dataInput.value,
+        email : emailInput.value,
+        senha : senhaInput.value,
+        primeiroEmprego : false,
+        tipoUsuario : select.value,
+        vagasCadastradas : []
+    }
+
+    axios.post('http://localhost:3000/usuarios', trabalhador)
+    .then((response) => {
+        console.log('Candidato cadastrado cadastrado => ', response.data);
+        resetarCampos(nomeCompletoInput, dataInput, emailInput, senhaInput);
+    })
+    .catch((error) => {
+        console.log('Erro => ', error);
+    });
+
 };
+
+// function checkboxChecked(){
+//     let dataInput = document.getElementById('data-nascimento-input-cadastro');
+//     console.log(dataInput.value);
+//     let checkbox = document.getElementById('checkbox');
+//     if (checkbox.checked === true) {
+//         let checked = checkbox.checked;
+//         console.log(checked)
+//     }
+    
+// }
+
 
 
 // Validar data
 
-const validarData = () => { 
-    let inputData = document.getElementById('birth-date-input');
-    let dataDigitada = inputData.value;
+// const validarData = () => { 
+//     let inputData = document.getElementById('data-nascimento-input-cadastro');
+//     let dataDigitada = inputData.value;
 
-    adicionarMascaraData(inputData, dataDigitada);
+//     adicionarMascaraData(inputData, dataDigitada);
 
-    let dataConvertida = moment(dataDigitada, 'DDMMYYYY');
+//     let dataConvertida = moment(dataDigitada, 'DDMMYYYY');
 
-    let dezoitoAnosAtras = moment().diff(dataConvertida, 'years') >= 18;
+//     let dezoitoAnosAtras = moment().diff(dataConvertida, 'years') >= 18;
 
-    // comparações de data - date1.isBefore(date2)  /  date1.isAfter(date2)  /  date1.isSameOrBefore(date2)  /  date1.isSameOrAfter(date2)
-    let dataAnteriorHoje = dataConvertida.isBefore(moment());
+//     // comparações de data - date1.isBefore(date2)  /  date1.isAfter(date2)  /  date1.isSameOrBefore(date2)  /  date1.isSameOrAfter(date2)
+//     let dataAnteriorHoje = dataConvertida.isBefore(moment());
 
-    let ehValido = dataConvertida.isValid() && dataAnteriorHoje && dezoitoAnosAtras && dataDigitada.length === 10; // 10/05/2001
+//     let ehValido = dataConvertida.isValid() && dataAnteriorHoje && dezoitoAnosAtras && dataDigitada.length === 10; // 10/05/2001
 
-    // para setar o texto de erro em vermelho
-    let erroData = document.getElementById('birth-date-cadastro-erro');
-    erroData.setAttribute('style', ehValido ? 'display: none' : 'color: red');
+//     // para setar o texto de erro em vermelho
+//     let erroData = document.getElementById('birth-date-cadastro-erro');
+//     erroData.setAttribute('style', ehValido ? 'display: none' : 'color: red');
 
-    return ehValido;
-}
+//     return ehValido;
+// }
 
 // Validar email
 const validarEmail = () => {
@@ -118,7 +155,14 @@ const validarSenha = () => {
     return ehValido;
 }
 
+const validarLogin = () => {
+    let cadastroValido =  validarEmail() && validarSenha();
+    console.log(`Cadastro ${cadastroValido ? 'válido!' : 'inválido'}`);
 
+    if(cadastroValido) {
+        cadastrarUsuario();
+    }
+}
 // reset de campos
 
 const resetarCampos = (...campos) => {
@@ -127,11 +171,11 @@ const resetarCampos = (...campos) => {
 
 
 // end point
-axios.post('http://localhost:3000/candidatos', candidato)
-.then((response) => {
-    console.log('Candidato cadastrado cadastrado => ', response.data);
-    resetarCampos(nomeCompletoInput, dataInput, emailInput, senhaInput);
-})
-.catch((error) => {
-    console.log('Erro => ', error);
-});
+// axios.post('http://localhost:3000/candidatos', candidato)
+// .then((response) => {
+//     console.log('Candidato cadastrado cadastrado => ', response.data);
+//     resetarCampos(nomeCompletoInput, dataInput, emailInput, senhaInput);
+// })
+// .catch((error) => {
+//     console.log('Erro => ', error);
+// });

@@ -1,19 +1,14 @@
 {
-  "posts": [
+  "usuarios": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nome": "DEIVERSON CRUZ BAHIA",
+      "dataNascimento": "2021-11-25",
+      "email": "dcruzbhha2@gmail.com",
+      "senha": "fV#56m0*",
+      "primeiroEmprego": false,
+      "tipoUsuario": "1",
+      "vagasCadastradas": [],
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

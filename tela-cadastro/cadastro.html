@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./cadastro.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Cadastro</title>
 </head>
+
 <body>
     <div id="container" class="container">
         <form id="cadastro" class="cadastro-box">
             <div class="cadastro-title">
                 <span>Cadastro</span>
             </div>
-        
+
             <div class="tipo-cadastro-class">
                 <span>Tipo de cadastro</span>
-                <select  id="tipo-cadastro">
-                    <option value="opt1">Trabalhador</option>
-                    <option value="opt2">Recrutador</option>
+                <select id="tipo-cadastro">
+                    <option value="1">Trabalhador</option>
+                    <option value="2">Recrutador</option>
                 </select>
             </div>
 
@@ -45,9 +49,9 @@
                 <input type="password" id="password-input-cadastro">
                 <span id="senha-invalida-cadastro" style="display: none;"></span>
             </div>
-        
+
             <div class="check-box">
-                <input type="checkbox">Primeiro Emprego?</input>
+                <input id="checkbox" type="checkbox" value="true">Primeiro Emprego?</input>
             </div>
 
             <div class="cadastrar-btn">
@@ -62,4 +66,5 @@
         <script src="https://unpkg.com/moment"></script>
         <script src="./cadastro.js"></script>
 </body>
+
 </html>
