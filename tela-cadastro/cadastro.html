@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container" class="container">
-        <form id="login" class="cadastro-box">
+        <form id="cadastro" class="cadastro-box">
             <div class="cadastro-title">
                 <span>Cadastro</span>
             </div>
@@ -25,17 +25,17 @@
 
             <div class="name-input">
                 <span>Nome Completo*</span>
-                <input type="text" id="password-input-login">
+                <input type="text" id="nome-completo-input-cadastro">
             </div>
 
             <div class="birth-date-input">
                 <span>Data de Nasimento*</span>
-                <input type="date" id="password-input-login">
+                <input type="date" id="data-nascimento-input-cadastro">
             </div>
 
             <div class="email-input">
                 <span>Email*</span>
-                <input type="email" id="password-input-login">
+                <input type="email" id="email-input-cadastro">
             </div>
 
             <div class="password-input">
@@ -54,6 +54,8 @@
 
 
         </form>
-       
+
+        <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="./cadastro.js"></script>
 </body>
 </html>
