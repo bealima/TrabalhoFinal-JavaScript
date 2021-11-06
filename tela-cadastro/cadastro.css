@@ -1,0 +1,225 @@
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+ /* ------------   Box do cadastro inteiro ---------------- */
+ .cadastro-box {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-bottom: 30px;
+     border: 1px solid #353A40;
+     min-width: 80%;
+     min-height: 600px;
+     border-radius: 5px;
+ }
+
+ .cadastro-title {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px 0px;
+    color: white;
+    background-color: #353A40 ;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* ------------   Tipo de cadastro ---------------- */
+ 
+ .tipo-cadastro-class {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+ }
+
+ .tipo-cadastro-class span{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: start;
+}
+
+ .tipo-cadastro-class select {
+     display: flex;
+     margin: 5px 0;
+     margin-bottom: 10px;
+     width: 80%;
+     height: 30px;
+     border-radius: 5px;
+     outline: none;
+     border: 1px solid #353A40;
+ }
+
+
+
+/* ------------   Cadastro do nome de usuário ---------------- */
+
+ 
+ .name-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.name-input input {
+    display: flex;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #353A40;
+}
+
+.name-input span {
+    display: flex;
+    width: 80%;
+    align-items: start;
+}
+
+
+/* ------------   Cadastro da data de aniversário do usuário ---------------- */
+
+.birth-date-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.birth-date-input input {
+    display: flex;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #353A40;
+}
+
+.birth-date-input span {
+    display: flex;
+    width: 80%;
+    align-items: start;
+}
+
+
+/* ------------   Cadastro de email do usuário ---------------- */
+
+.email-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.email-input input {
+    display: flex;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #353A40;
+}
+
+.email-input span {
+    display: flex;
+    width: 80%;
+    align-items: start;
+}
+
+
+/* ------------   Cadastro da senha do usuário ---------------- */
+
+.password-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.password-input input {
+    display: flex;
+    margin: 5px 0;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 24px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #353A40;
+}
+
+.password-input span {
+    display: flex;
+    width: 80%;
+    align-items: start;
+}
+
+
+/* ------------   Botão de cadastro ---------------- */
+
+.cadastrar-btn{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.cadastrar-btn button {
+    width: 155px;
+    padding: 10px;
+    background-color: #353A40 ;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.cadastrar-btn button:first-child {
+    width: 155px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #353A40;
+    border-radius: 3px;
+    color: #353A40;
+}
+
+.cadastrar-btn button:hover {
+    background-color: #4f555c;
+    color: black;
+}
+
+
+.check-box {
+    display: flex;
+    width: 80%;
+    margin: 30px 0;
+}
+
