@@ -1,0 +1,121 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 85%;
+    margin: auto;
+    border: 1px solid #979595;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.main_title {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #1d1d1d;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main_title h3 {
+    color: #fff;
+}
+
+.job_info {
+    border: 1px solid #979595;
+    width: 75%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.job_info_content {
+    width: 95%;
+    margin: auto;
+}
+
+.content_title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+section+h2 {
+    text-align: center;
+}
+
+.job_candidates {
+    margin-bottom: 30px;
+}
+
+.job_candidates .candidates_title {
+    border: 1px solid #000;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.candidates_title h5:nth-of-type(1) {
+    margin-left: 5px;
+}
+
+.candidates_title h5:nth-of-type(2) {
+    margin-right: 5px;
+}
+
+.job_candidates .candidates {
+    margin: auto;
+    border: 1px solid #000;
+    width: 75%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.candidates h5:nth-of-type(1) {
+    margin-left: 8px;
+}
+
+.candidates h5:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.buttons {
+    /* border: 1px solid #000; */
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button:nth-of-type(1) {
+    width: 100px;
+    height: 40px;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-bottom: 30px;
+}
+
+.buttons button:nth-of-type(2) {
+    width: 140px;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #1d1d1d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
