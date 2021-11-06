@@ -9,6 +9,26 @@
       "tipoUsuario": "1",
       "vagasCadastradas": [],
       "id": 1
+    },
+    {
+      "nome": "DEIVERSON CRUZ BAHIA",
+      "dataNascimento": "2021-11-19",
+      "email": "dcruzbhha2@gmail.com",
+      "senha": "fV#56m0*",
+      "primeiroEmprego": "true",
+      "tipoUsuario": "1",
+      "vagasCadastradas": [],
+      "id": 2
+    },
+    {
+      "nome": "DEIVERSON CRUZ BAHIA",
+      "dataNascimento": "2021-11-19",
+      "email": "dcruzbhha2@gmail.com",
+      "senha": "fV#56m0*",
+      "primeiroEmprego": "false",
+      "tipoUsuario": "1",
+      "vagasCadastradas": [],
+      "id": 3
     }
   ]
 }

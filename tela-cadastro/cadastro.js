@@ -36,7 +36,10 @@ const cadastrarUsuario = () => {
     let senhaInput = document.getElementById('password-input-cadastro');
     let checkbox = document.getElementById('checkbox');
     if (checkbox.checked === true) {
-        checkbox.value = true;  
+        checkbox.value = true ;  
+    }
+    else {
+        checkbox.value = false;
     }
     let select = document.getElementById('tipo-cadastro');
      
@@ -45,7 +48,7 @@ const cadastrarUsuario = () => {
         dataNascimento : dataInput.value,
         email : emailInput.value,
         senha : senhaInput.value,
-        primeiroEmprego : false,
+        primeiroEmprego : checkbox.value,
         tipoUsuario : select.value,
         vagasCadastradas : []
     }
