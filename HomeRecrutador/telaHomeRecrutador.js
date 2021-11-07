@@ -1,23 +1,6 @@
-/*Acessar Detalhamento de vagas :
- event.listener("click", irpara página de detalhamento da vaga)*/
 
-//botão sair: Logout- voltar para página de login , limpar dados 
-
-/* Cadatrar vaga: 
-
-    tela de cadastro : 
-
-    - título
-    - descrição
-    - remuneração
-    - botão voltar
-    - botão cadastar
-
-*/
-
-const cadastrarVaga = () => {
+const abrirTelacadastroVaga = () => {
     let btnCadastrarVaga =  document.getElementById('btnCadastrarVagaHome');
-    console.log(btnCadastrarVaga);
     btnCadastrarVaga.addEventListener('click', telaCadastroVaga);
 };
 
@@ -27,31 +10,95 @@ const telaCadastroVaga = () => {
     blocoMain.setAttribute('style', 'display:none');
 
     
-
-    let divInputTitulo = document.createElement('div');
-
-//---------- Criação Inputs ----------------------------------
     let main = document.getElementById('main');
+    main.setAttribute('class', 'classMainCadastroVagas');
     
-    let inputitulo = document.createElement('input');
-    inputitulo.setAttribute('type','text')
 
-    let inputDescricao = document.createElement('input');
-    inputitulo.setAttribute('type','text')
+    let divInputs = document.createElement('div');
+    divInputs.setAttribute('class', 'classDivInputs');   
+    main.appendChild(divInputs);
+
+    
+    let divInputTitulo = document.createElement('div');
+    divInputTitulo.setAttribute('class', 'classDivInputTitulo');
+    divInputs.appendChild(divInputTitulo);
+    
+    let h3Titulo = document.createElement('h3');
+    h3Titulo.innerText = 'Título da Vaga:'
+    divInputTitulo.appendChild(h3Titulo);
+
+    let inputTitulo = document.createElement('input');
+    inputTitulo.setAttribute('class', 'classInputTitulo');
+    divInputTitulo.appendChild(inputTitulo);
+
+
+    let divInputRemuneracao = document.createElement('div');
+    divInputRemuneracao.setAttribute('class', 'classDivInputRemuneracao');
+    divInputs.appendChild(divInputRemuneracao);
+
+    let h3Remuneracao = document.createElement('h3');
+    h3Remuneracao.innerText = 'Salário: '
+    divInputRemuneracao.appendChild(h3Remuneracao);
 
     let inputRemuneracao = document.createElement('input');
-    inputitulo.setAttribute('type','text')
+    inputRemuneracao.setAttribute('class', 'classInputRemuneracao');
+    divInputRemuneracao.appendChild(inputRemuneracao);
 
-// ---------- Colocando os Inputs na DIV --------------------------
-    divInputTitulo.appendChild(inputitulo);
+    let divInputDescricao = document.createElement('div');
+    divInputDescricao.setAttribute('class', 'classDivInputDescricao');
+    divInputs.appendChild(divInputDescricao);
 
-    divInputTitulo.appendChild(inputDescricao);
+    let h3Descricao = document.createElement('h3');
+    h3Descricao.innerText = 'Descrição da vaga:'
+    divInputDescricao.appendChild(h3Descricao);
 
-    divInputTitulo.appendChild(inputRemuneracao);
+    let inputDescricao = document.createElement('input');
+    inputDescricao.setAttribute('class', 'classInputDescricao');
+    divInputDescricao.appendChild(inputDescricao);
 
-    main.appendChild(divInputTitulo);
+  
+    let divButtonsCadastrarVagas = document.createElement('div');
+    divButtonsCadastrarVagas.setAttribute('class','classDivButtonsCadastrarVagas');
+    divInputs.appendChild(divButtonsCadastrarVagas);
 
+    let btnSairTelaCadastroVaga = document.createElement('button');
+    btnSairTelaCadastroVaga.setAttribute('class', 'classBtnSairTelaCadastroVaga');
+    btnSairTelaCadastroVaga.innerText = 'Voltar'
+    divButtonsCadastrarVagas.appendChild(btnSairTelaCadastroVaga);
+
+    let btnCadastrarTelaCadastroVaga = document.createElement('button');
+    btnCadastrarTelaCadastroVaga.setAttribute('class', 'classBtnCadastrarTelaCadastroVaga');
+    btnCadastrarTelaCadastroVaga.innerText = 'Cadastrar'
+    divButtonsCadastrarVagas.appendChild(btnCadastrarTelaCadastroVaga); 
+    
+    const cadastrarVaga = () => { 
+       
+        console.log('String test')
+        
+        let vaga = {
+            titulo : inputTitulo.value,
+            remuneracao : inputRemuneracao.value,
+            descricao : inputDescricao.value,
+            candidatos :[] ,
+            rejeitado : false
+            
+        };
+    
+        axios.post('http://localhost:3000/vagas', vaga)
+        .then((response) => {
+            console.log('Vaga cadastrada => ', response.data);
+            resetarCampos(inputTitulo, inputRemuneracao, inputDescricao);
+        })
+        .catch((error) => {
+            console.log('Erro => ', error);
+        });
+    
+    };
+
+    btnCadastrarTelaCadastroVaga.addEventListener('click', cadastrarVaga);
+    
     
 }
 
-cadastrarVaga()
+abrirTelacadastroVaga()
+
