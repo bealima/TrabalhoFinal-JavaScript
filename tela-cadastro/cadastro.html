@@ -35,20 +35,21 @@
 
             <div class="birth-date-input">
                 <span>Data de Nasimento*</span>
-                <input type="date" id="data-nascimento-input-cadastro" onchange="validarData()">
+                <input type="date" id="data-nascimento-input-cadastro" title="Necessário ser maior de idade (+18)" onchange="validarData()">
                 <span id="birth-date-cadastro-erro" style="display: none;">Data inválida</span>
             </div>
 
             <div class="email-input">
                 <span>Email*</span>
-                <input type="email" id="email-input-cadastro"  onkeyup="validarEmail()" value="aa@bb.cc">
+                <input type="email" id="email-input-cadastro"  onkeyup="validarEmail()" title="Email" value="aa@bb.cc">
                 <span id="email-cadastro-erro" style="display: none;" >Email inválido</span>
             </div>
 
             <div class="password-input">
                 <span>Senha*</span>
-                <input type="password" id="password-input-cadastro" onkeyup="validarSenha()" value="12345@Aa">
-                <span id="senha-invalida-cadastro" style="display: none;">Senha inválida</span>
+                <input type="password" id="password-input-cadastro" onkeyup="validarSenha()"
+                title="Necessário ter uma letra maiúscula, uma letra minúscula, um caracter especial, um número e no mínimo 8 dígitos" value="12345@Aa">
+                <span id="senha-invalida-cadastro" style="display: none;">Senha inválida, exemplo de senha válida: "12345@Ab"</span>
             </div>
 
             <div class="check-box">
@@ -56,7 +57,7 @@
             </div>
 
             <div class="cadastrar-btn">
-                <button type="button" onclick="validarLogin()">Voltar</button>
+                <button type="button" onclick="changePage()">Voltar</button>
                 <button type="button" onclick="validarLogin()">Cadastrar</button>
             </div>
 

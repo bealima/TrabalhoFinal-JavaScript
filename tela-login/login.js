@@ -7,10 +7,18 @@ const validarLogin = () => {
             let podeLogar = response.data.some(c => c.email === emailDigitado && c.senha === senhaDigitada);
             
             
+            
             if(podeLogar) {
-                console.log('It works')
-                irPara('login', 'home');
+                changePage();
+            }else{
+                alert('Usuário ou senha inválido')
             }
         })
         .catch(error => console.error(error));
+
+        
+}
+
+const changePage = () => {
+    window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-cadastro/cadastro.html'
 }
