@@ -1,21 +1,5 @@
-/*Acessar Detalhamento de vagas :
- event.listener("click", irpara página de detalhamento da vaga)*/
 
-//botão sair: Logout- voltar para página de login , limpar dados 
-
-/* Cadatrar vaga: 
-
-    tela de cadastro : 
-
-    - título
-    - descrição
-    - remuneração
-    - botão voltar
-    - botão cadastar
-
-*/
-
-const cadastrarVaga = () => {
+const abrirTelacadastroVaga = () => {
     let btnCadastrarVaga =  document.getElementById('btnCadastrarVagaHome');
     console.log(btnCadastrarVaga);
     btnCadastrarVaga.addEventListener('click', telaCadastroVaga);
@@ -28,30 +12,95 @@ const telaCadastroVaga = () => {
 
     
 
-    let divInputTitulo = document.createElement('div');
-
-//---------- Criação Inputs ----------------------------------
     let main = document.getElementById('main');
+    main.setAttribute('class', 'classMainCadastroVagas' );
     
-    let inputitulo = document.createElement('input');
-    inputitulo.setAttribute('type','text')
+
+    let divInputs = document.createElement('div');
+    divInputs.setAttribute('class', 'classDivInputs');   
+    main.appendChild(divInputs);
+
+    
+    let divInputTitulo = document.createElement('div');
+    divInputTitulo.setAttribute('class', 'classDivInputTitulo');
+    divInputs.appendChild(divInputTitulo);
+    
+    let inputTitulo = document.createElement('input');
+    inputTitulo.setAttribute('class', 'classInputTitulo');
+    divInputTitulo.appendChild(inputTitulo);
+
+    let divInputDescricao = document.createElement('div');
+    divInputDescricao.setAttribute('class', 'classDivInputDescricao');
+    divInputs.appendChild(divInputDescricao);
 
     let inputDescricao = document.createElement('input');
-    inputitulo.setAttribute('type','text')
+    inputDescricao.setAttribute('class', 'classInputDescricao');
+    divInputDescricao.appendChild(inputDescricao);
+    
+
+    let divInputRemuneracao = document.createElement('div');
+    divInputRemuneracao.setAttribute('class', 'classDivInputRemuneracao');
+    divInputs.appendChild(divInputRemuneracao);
 
     let inputRemuneracao = document.createElement('input');
-    inputitulo.setAttribute('type','text')
+    inputRemuneracao.setAttribute('class', 'classInputRemuneracao');
+    divInputRemuneracao.appendChild(inputRemuneracao);
+
+  
+    let divButtonsCadastrarVagas = document.createElement('div');
+    divButtonsCadastrarVagas.setAttribute('class','classDivButtonsCadastrarVagas');
+    divInputs.appendChild(divButtonsCadastrarVagas);
+
+    let btnSairTelaCadastroVaga = document.createElement('button');
+    btnSairTelaCadastroVaga.setAttribute('class', 'classBtnSairTelaCadastroVaga');
+    divButtonsCadastrarVagas.appendChild(btnSairTelaCadastroVaga);
+
+    let btnCadastrarTelaCadastroVaga = document.createElement('button');
+    btnCadastrarTelaCadastroVaga.setAttribute('class', 'classBtnCadastrarTelaCadastroVaga');
+    divButtonsCadastrarVagas.appendChild(btnCadastrarTelaCadastroVaga);
+    
 
 // ---------- Colocando os Inputs na DIV --------------------------
-    divInputTitulo.appendChild(inputitulo);
-
-    divInputTitulo.appendChild(inputDescricao);
-
-    divInputTitulo.appendChild(inputRemuneracao);
-
-    main.appendChild(divInputTitulo);
+    
 
     
 }
 
-cadastrarVaga()
+abrirTelacadastroVaga()
+
+
+//---------Cadastrar Vaga --------------------------
+
+const cadastrarVaga = () => {
+
+    let nomeCompletoInput = document.getElementById('nome-completo-input-cadastro');
+    let dataInput = document.getElementById('data-nascimento-input-cadastro');
+    let emailInput = document.getElementById('email-input-cadastro');
+    let senhaInput = document.getElementById('password-input-cadastro');
+    let checkbox = document.getElementById('checkbox');
+    
+    let vaga = {
+        titulo : nomeCompletoInput.value,
+        descricao : dataInput.value,
+        remuneracao : emailInput.value,
+        candidatos : senhaInput.value,
+        rejeitado : checkbox.value,
+        
+    }
+
+}
+//----------------Axio Post---------------------------
+// let gravarVagas = async() => {
+//     let vaga = {
+
+//         titulo : '',
+//         descricao : '',
+//         remuneracao : '',
+//         candidatos : [],
+//         rejeitado : false
+//     }
+
+//     let response = await axios.post ('http://localhost:3000/vagas', vaga);
+//     console.log(response);
+// };
+// gravarVagas()

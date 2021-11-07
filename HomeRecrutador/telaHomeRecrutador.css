@@ -94,3 +94,59 @@ main {
     height: 35px;
     width: 110px;
 }
+
+.classMainCadastroVagas{
+
+}
+
+.classDivInputs{
+
+}
+
+.classDivInputTitulo{
+
+}
+
+.classDivInputDescricao{
+
+}
+
+.classDivInputRemuneracao{
+
+}
+
+.classInputTitulo{
+
+}
+
+.classInputDescricao{
+
+}
+
+.classInputRemuneracao{
+
+}
+
+.classDivButtonsCadastrarVagas{
+
+}
+
+.classBtnSairTelaCadastroVaga{
+
+}
+
+.classBtnCadastrarTelaCadastroVaga{
+    
+}
+/* .inputVagas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.campoInput{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 40px;
+    width: 300px;
+} */
