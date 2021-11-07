@@ -24,7 +24,15 @@
         rejeitado : false
     }
 //#endregion
-
+class Usuario {
+    tipo = '';
+    nome = '';
+    dataNascimento = '';
+    email = '';
+    senha = '';
+    primeiroEmprego = '';
+    candidaturas = [];
+}
 
 
 // Cadastro nome de usuário
@@ -43,18 +51,28 @@ const cadastrarUsuario = () => {
     }
     let select = document.getElementById('tipo-cadastro');
      
-    let trabalhador = {
-        nome : nomeCompletoInput.value,
-        dataNascimento : dataInput.value,
-        email : emailInput.value,
-        senha : senhaInput.value,
-        primeiroEmprego : checkbox.value,
-        tipoUsuario : select.value,
-        vagasCadastradas : []
-    }
+
+    let usuario = new Usuario();
+    usuario.nome = nomeCompletoInput.value;
+    usuario.dataNascimento = dataInput.value;
+    usuario.email = emailInput.value;
+    usuario.senha = senhaInput.value;
+    usuario.primeiroEmprego = checkbox.value;
+    usuario.tipo = select.value;
+    usuario.candidaturas = [];
+
+    // let trabalhador = {
+    //     nome : nomeCompletoInput.value,
+    //     dataNascimento : dataInput.value,
+    //     email : emailInput.value,
+    //     senha : senhaInput.value,
+    //     primeiroEmprego : checkbox.value,
+    //     tipoUsuario : select.value,
+    //     vagasCadastradas : []
+    // }
 
     console.log(trabalhador)
-    axios.post('http://localhost:3000/usuarios', trabalhador)
+    axios.post('http://localhost:3000/usuarios', usuario)
     .then((response) => {
         console.log('Candidato cadastrado cadastrado => ', response.data);
         resetarCampos(nomeCompletoInput, dataInput, emailInput, senhaInput);
