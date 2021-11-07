@@ -39,6 +39,26 @@
       "tipoUsuario": "1",
       "vagasCadastradas": [],
       "id": 4
+    },
+    {
+      "nome": "Augusto Citton",
+      "dataNascimento": "1995-06-07",
+      "email": "aa@bb.cc",
+      "senha": "12345@Aa",
+      "primeiroEmprego": "false",
+      "tipoUsuario": "1",
+      "vagasCadastradas": [],
+      "id": 5
+    },
+    {
+      "nome": "Carlos Auberto",
+      "dataNascimento": "1979-02-07",
+      "email": "carlos.alberto@gmail.com",
+      "senha": "Carlos@80",
+      "primeiroEmprego": "false",
+      "tipoUsuario": "2",
+      "vagasCadastradas": [],
+      "id": 6
     }
   ]
 }
