@@ -81,29 +81,21 @@ const cadastrarUsuario = () => {
 
 // Validar data
 
+
+const validarNome = () => {
+    let inputNome = document.getElementById('nome-completo-input-cadastro').value;
+
+
+}
+
 const validarData = () => { 
-
-    // Problema aqui VVVVVV
-    let inputData = document.getElementById('data-nascimento-input-cadastro');
-    let conversor = moment(inputData.value, 'DD/MM/YYYY')
-    let dataDigitada = conversor.value;
-    //fim problema
-
-    let dataConvertida = moment(dataDigitada, 'DDMMYYYY');
-    console.log(dataConvertida)
-
+    let inputData = document.getElementById('data-nascimento-input-cadastro').value;
+    let conversor = moment(inputData).format('DD/MM/YYYY')
     let hoje = moment().format('DD/MM/YYYY')
+    let dezoitoAnosAtras = moment(hoje).diff(conversor, 'years');
 
-    console.log(dataConvertida)
 
-    let dezoitoAnosAtras = moment(hoje).diff(dataConvertida, 'years');
-
-    console.log(dezoitoAnosAtras)
-
-    // comparações de data - date1.isBefore(date2)  /  date1.isAfter(date2)  /  date1.isSameOrBefore(date2)  /  date1.isSameOrAfter(date2)
-    // let dataAnteriorHoje = dataConvertida.isBefore(moment());
-
-    let ehValido = dezoitoAnosAtras; // 10/05/2001
+    let ehValido = dezoitoAnosAtras >= 18; 
 
     // para setar o texto de erro em vermelho
     let erroData = document.getElementById('birth-date-cadastro-erro');
@@ -165,7 +157,7 @@ const validarSenha = () => {
 
     // para setar o texto de erro em vermelho
     let erroSenha = document.getElementById('senha-invalida-cadastro');
-    erroSenha.setAttribute('class', ehValido ? 'd-none' : 'text-danger');
+    erroSenha.setAttribute('style', ehValido ? 'display: none' : 'color: red');
 
     return ehValido;
 }

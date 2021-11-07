@@ -29,6 +29,16 @@
       "tipoUsuario": "1",
       "vagasCadastradas": [],
       "id": 3
+    },
+    {
+      "nome": "Augusto Citton",
+      "dataNascimento": "1997-06-10",
+      "email": "aa@bb.cc",
+      "senha": "12345@Aa",
+      "primeiroEmprego": "false",
+      "tipoUsuario": "1",
+      "vagasCadastradas": [],
+      "id": 4
     }
   ]
 }
