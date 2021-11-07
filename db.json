@@ -1,10 +1,63 @@
 {
-  "usuarios": [
-    {
-      "nome": "Ana",
-      "idade": 27,
-      "id": 1
-    }
-  ],
-  "vagas": []
+    "usuarios": [{
+            "nome": "DEIVERSON CRUZ BAHIA",
+            "dataNascimento": "2021-11-25",
+            "email": "dcruzbhha2@gmail.com",
+            "senha": "fV#56m0*",
+            "primeiroEmprego": false,
+            "tipoUsuario": "1",
+            "vagasCadastradas": [],
+            "id": 1
+        },
+        {
+            "nome": "DEIVERSON CRUZ BAHIA",
+            "dataNascimento": "2021-11-19",
+            "email": "dcruzbhha2@gmail.com",
+            "senha": "fV#56m0*",
+            "primeiroEmprego": "true",
+            "tipoUsuario": "1",
+            "vagasCadastradas": [],
+            "id": 2
+        },
+        {
+            "nome": "DEIVERSON CRUZ BAHIA",
+            "dataNascimento": "2021-11-19",
+            "email": "dcruzbhha2@gmail.com",
+            "senha": "fV#56m0*",
+            "primeiroEmprego": "false",
+            "tipoUsuario": "1",
+            "vagasCadastradas": [],
+            "id": 3
+        },
+        {
+            "nome": "Augusto Citton",
+            "dataNascimento": "1997-06-10",
+            "email": "aa@bb.cc",
+            "senha": "12345@Aa",
+            "primeiroEmprego": "false",
+            "tipoUsuario": "1",
+            "vagasCadastradas": [],
+            "id": 4
+        },
+        {
+            "nome": "Augusto Citton",
+            "dataNascimento": "1995-06-07",
+            "email": "aa@bb.cc",
+            "senha": "12345@Aa",
+            "primeiroEmprego": "false",
+            "tipoUsuario": "1",
+            "vagasCadastradas": [],
+            "id": 5
+        },
+        {
+            "nome": "Carlos Auberto",
+            "dataNascimento": "1979-02-07",
+            "email": "carlos.alberto@gmail.com",
+            "senha": "Carlos@80",
+            "primeiroEmprego": "false",
+            "tipoUsuario": "2",
+            "vagasCadastradas": [],
+            "id": 6
+        }
+    ]
 }
