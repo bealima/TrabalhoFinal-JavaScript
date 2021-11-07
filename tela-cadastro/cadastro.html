@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./cadastro.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <form id="cadastro" class="cadastro-box">
+            <div class="cadastro-title">
+                <span>Cadastro</span>
+            </div>
+
+            <div class="tipo-cadastro-class">
+                <span>Tipo de cadastro</span>
+                <select id="tipo-cadastro">
+                    <option value="1">Trabalhador</option>
+                    <option value="2">Recrutador</option>
+                </select>
+            </div>
+
+            <div class="name-input">
+                <span>Nome Completo*</span>
+                <input type="text" id="nome-completo-input-cadastro" onkeyup="validarNome()" value='Augusto Citton'>
+                <span id="nome-completo-cadastro-erro" style="display: none;">Nome inválido</span>
+            </div>
+
+            <div class="birth-date-input">
+                <span>Data de Nasimento*</span>
+                <input type="date" id="data-nascimento-input-cadastro" onchange="validarData()">
+                <span id="birth-date-cadastro-erro" style="display: none;">Data inválida</span>
+            </div>
+
+            <div class="email-input">
+                <span>Email*</span>
+                <input type="email" id="email-input-cadastro"  onkeyup="validarEmail()" value="aa@bb.cc">
+                <span id="email-cadastro-erro" style="display: none;" >Email inválido</span>
+            </div>
+
+            <div class="password-input">
+                <span>Senha*</span>
+                <input type="password" id="password-input-cadastro" onkeyup="validarSenha()" value="12345@Aa">
+                <span id="senha-invalida-cadastro" style="display: none;">Senha inválida</span>
+            </div>
+
+            <div class="check-box">
+                <input id="checkbox" type="checkbox">Primeiro Emprego?</input>
+            </div>
+
+            <div class="cadastrar-btn">
+                <button type="button" onclick="validarLogin()">Voltar</button>
+                <button type="button" onclick="validarLogin()">Cadastrar</button>
+            </div>
+
+
+        </form>
+
+        <script src="./node_modules/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/moment"></script>
+        <script src="./cadastro.js"></script>
+</body>
+
+</html>
