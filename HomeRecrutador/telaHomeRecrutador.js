@@ -1,7 +1,6 @@
 
 const abrirTelacadastroVaga = () => {
     let btnCadastrarVaga =  document.getElementById('btnCadastrarVagaHome');
-    console.log(btnCadastrarVaga);
     btnCadastrarVaga.addEventListener('click', telaCadastroVaga);
 };
 
@@ -70,52 +69,36 @@ const telaCadastroVaga = () => {
     let btnCadastrarTelaCadastroVaga = document.createElement('button');
     btnCadastrarTelaCadastroVaga.setAttribute('class', 'classBtnCadastrarTelaCadastroVaga');
     btnCadastrarTelaCadastroVaga.innerText = 'Cadastrar'
-    divButtonsCadastrarVagas.appendChild(btnCadastrarTelaCadastroVaga);
+    divButtonsCadastrarVagas.appendChild(btnCadastrarTelaCadastroVaga); 
+    
+    const cadastrarVaga = () => { 
+       
+        console.log('String test')
+        
+        let vaga = {
+            titulo : inputTitulo.value,
+            remuneracao : inputRemuneracao.value,
+            descricao : inputDescricao.value,
+            candidatos :[] ,
+            rejeitado : false
+            
+        };
+    
+        axios.post('http://localhost:3000/vagas', vaga)
+        .then((response) => {
+            console.log('Vaga cadastrada => ', response.data);
+            resetarCampos(inputTitulo, inputRemuneracao, inputDescricao);
+        })
+        .catch((error) => {
+            console.log('Erro => ', error);
+        });
+    
+    };
+
+    btnCadastrarTelaCadastroVaga.addEventListener('click', cadastrarVaga);
+    
     
 }
 
 abrirTelacadastroVaga()
 
-//---------Cadastrar Vaga --------------------------
-
-const cadastrarVaga = () => {
-
-    let inputTitulo = document.getElementsByClassName('classInputTitulo');
-    let inputRemuneracao = document.getElementsByClassName('classInputRemuneracao');
-    let inputDescricao = document.getElementsByClassName('classInputDescricao');
-
-   
-    console.log('String test')
-    
-    let vaga = {
-        titulo : inputTitulo.value,
-        remuneracao : inputRemuneracao.value,
-        descricao : inputDescricao.value,
-        candidatos :[] ,
-        rejeitado : false
-        
-    };
-
-    axios.post('http://localhost:3000/vagas', vaga)
-    .then((response) => {
-        console.log('Vaga cadastrada => ', response.data);
-        resetarCampos(inputTitulo, inputRemuneracao, inputDescricao);
-    })
-    .catch((error) => {
-        console.log('Erro => ', error);
-    });
-
-    let gravarVaga = async() => {
-    
-        let response = await axios.post ('http://localhost:3000/vagas', vaga);
-    };
-
-};
-
-const chamarCadastrarVaga = () =>{
-let btnCadastrarTelaCadastroVaga = document.getElementsByClassName('classBtnCadastrarTelaCadastroVaga');
-btnCadastrarTelaCadastroVaga.addEventListener('click', cadastrarVaga);
-
-}
-
-chamarCadastrarVaga()
