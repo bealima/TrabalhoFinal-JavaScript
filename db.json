@@ -84,10 +84,19 @@
             "id": 12
         },
         {
-            "titulo": "Assistente Administrativo",
-            "remuneracao": "R$ 1200,00",
-            "descricao": "Atendimento ao cliente.",
-            "candidatos": [],
+            "titulo": "Desenvolvedor Flutter",
+            "remuneracao": "R$ 3200,00",
+            "descricao": "Trabalho envolverá desenvolver aplicações escaláveis e de grande porte.",
+            "candidatos": [{
+                "nome": "DEIVERSON CRUZ BAHIA",
+                "dataNascimento": "2021-11-25",
+                "email": "dcruzbhha2@gmail.com",
+                "senha": "fV#56m0*",
+                "primeiroEmprego": false,
+                "tipoUsuario": "1",
+                "vagasCadastradas": [],
+                "id": 1
+            }],
             "rejeitado": false,
             "id": 13
         },
