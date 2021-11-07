@@ -168,6 +168,12 @@ const resetarCampos = (...campos) => {
 }
 
 
+
+const changePage = () => {
+    window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
+}
+
+
 // end point
 // axios.post('http://localhost:3000/candidatos', candidato)
 // .then((response) => {
