@@ -75,14 +75,28 @@ const telaCadastroVaga = () => {
        
         console.log('String test')
         
-        let vaga = {
-            titulo : inputTitulo.value,
-            remuneracao : inputRemuneracao.value,
-            descricao : inputDescricao.value,
-            candidatos :[] ,
-            rejeitado : false
+        class Vaga{
+            titulo = '';
+            descricao = '';
+            remuneracao = ''; 
+            candidatos = []
+        }
+
+        let vaga = new Vaga();
+        vaga.titulo = inputTitulo.value;
+        vaga.descricao = inputDescricao.value;
+        vaga.remuneracao = inputRemuneracao.value;
+        vaga.candidatos = [];
+
+
+        // let vaga = {
+        //     titulo : inputTitulo.value,
+        //     remuneracao : inputRemuneracao.value,
+        //     descricao : inputDescricao.value,
+        //     candidatos :[] ,
+        //     rejeitado : false
             
-        };
+        // };
     
         axios.post('http://localhost:3000/vagas', vaga)
         .then((response) => {

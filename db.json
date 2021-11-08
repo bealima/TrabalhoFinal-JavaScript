@@ -23,6 +23,13 @@
       "candidatos": [],
       "rejeitado": false,
       "id": 3
+    },
+    {
+      "titulo": "Testing",
+      "descricao": "This is a job offer",
+      "remuneracao": "500000",
+      "candidatos": [],
+      "id": 4
     }
   ]
 }
