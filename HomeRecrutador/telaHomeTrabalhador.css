@@ -28,71 +28,72 @@ main {
     border-radius: 0px 0px 5px 5px;
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 530px;
     width: 85%;
-}
-#blocoMain{
-    align-items: center;
-    display: flex;
-    flex-direction: column;   
-    width: 100%;
 }
 
 .blocoVagas {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-top: 20px;
     height: 420px;
     width: 80%;
 }
 
-.vagasHome{
+.classVagasHome{
     align-items: center;
     border: 1px black solid;
     border-radius: 3px;
     display: flex;
     flex-direction: row;
     margin-bottom: 15px;
-    height: 30%;
+    height: 20%;
     justify-content: space-between;
 }
 
-.vagasHome:hover{
+.classVagasHome:hover{
     background-color: rgb(184, 181, 181);
 
 }
 
-#tituloVaga, #remuneracaoVaga{
+.classDivTitulo, .classDivRemuneracao{
     margin-left: 5px;
 }
 
-#tituloDescricaoVaga{
+.classSpan{
     display: flex;
     flex-direction: row;
     margin: 0px 10px 0px 10px;
 }
 
-#buttons{
+
+/* #buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 15px;
-    width: 80%;
-}
+    
+} */
+
 #btnSairHome{
-    background-color: rgb(228, 224, 224);
+    background-color: rgb(224, 221, 221);
     border-radius: 3px;
     height: 35px;
     width: 110px;
+    margin-right: 300px;
 }
 
-#btnCadastrarVagaHome{
+#btnCadastrarVaga{
     color: white;
     background-color: black;
     border-radius: 3px;
     height: 35px;
     width: 110px;
+    margin-left: 300px;
+}
+
+#naoHaVagas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .classMainCadastroVagas{
