@@ -15,9 +15,6 @@ const listarVagas = () =>{
         console.log(response);
         responseData.forEach(e => {
 
-            // let idVaga = e.id
-            // console.log(idVaga)
-
             let vagasHome = document.createElement('div');
             vagasHome.setAttribute('class', 'classVagasHome');
             blocoVagas.appendChild(vagasHome);

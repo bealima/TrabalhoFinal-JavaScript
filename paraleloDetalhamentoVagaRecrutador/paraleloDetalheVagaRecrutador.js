@@ -1,6 +1,8 @@
 const direcionarDetalheVaga = async () =>{
     
-    let id = await axios.get('http://localhost:3000/idVagaAtual/0')
+    let responseId = await axios.get('http://localhost:3000/idVagaAtual/0')
+
+    let id = responseId.data.idAtual;
     
     // let elementoOrigem = document.getElementById('home');
     // let elementoDestino = document.getElementById('edit');

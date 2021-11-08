@@ -13,6 +13,7 @@ const listarVagas = () =>{
             let vagasHome = document.createElement('div');
             vagasHome.setAttribute('class', 'classVagasHome');
             blocoVagas.appendChild(vagasHome);
+            vagasHome.addEventListener('click', () => direcionarDetalheVaga(e.id) );
 
             let spanTitulo = document.createElement('span');
             spanTitulo.setAttribute('class', 'classSpan');
@@ -52,6 +53,14 @@ const listarVagas = () =>{
     
 }
 listarVagas()
+
+
+const direcionarDetalheVaga = async (id) =>{
+    console.log('Testing')
+    await axios.put('http://localhost:3000/idVagaAtual/0', {idAtual:id})
+        window.location.href = '/detalhe_vaga_trabalhador/index.html'
+        
+}
 
 const changePage = () => {
     window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
