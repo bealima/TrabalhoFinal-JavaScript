@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./telaHomeTrabalhador.css">
-    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
     <header>
         <h1>Vagas</h1>
     </header>
-    <main>
+    <main id="main">
         <div id="block-Vagas" class="blocoVagas">
             <!-- <div id="naoHaVagas">
                 <h2>Não existem vagas no momento</h2>
@@ -23,7 +23,12 @@
 
         </div>
 
-        <div><button type="button" id="btnSairHome" onclick="changePage()"> Sair </button></div>
+        <div id="botoes">
+
+            <button type="button" id="btnSairHome" onclick="changePage()"> Sair </button>
+            <button type="button" id="btnCadastrarVaga"> Cadastrar Vaga </button>
+
+        </div>
 
 
     </main>

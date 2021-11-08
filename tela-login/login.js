@@ -37,9 +37,9 @@ const changePage = () => {
         let userEmail = responseData.find(email => emailDigitado === email.email);
         let typeUsuario = userEmail.tipo;
         if(typeUsuario === '1'){
-            window.location.href = 'https://www.youtube.com/'
+            window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/HomeTrabalhador/telaHomeTrabalhador.html'
         } else {
-            window.location.href = 'https://globoplay.globo.com/'
+            window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/HomeRecrutador/telaHomeTrabalhador.html'
         }
     })
     .catch(error => console.error(error)); 
