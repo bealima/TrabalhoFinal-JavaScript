@@ -141,11 +141,11 @@
     },
     {
       "tipo": "1",
-      "nome": "asdasd asdasd",
-      "dataNascimento": "1997-01-06",
-      "email": "asdads@asdas.asdas",
-      "senha": "asd12@aA",
-      "primeiroEmprego": "false",
+      "nome": "Pietro Rosa",
+      "dataNascimento": "1997-01-01",
+      "email": "pietro.rosa@gmail.com",
+      "senha": "Pietro@1",
+      "primeiroEmprego": "true",
       "candidaturas": [],
       "id": 8
     }

@@ -76,6 +76,7 @@ const cadastrarUsuario = () => {
     .then((response) => {
         console.log('Candidato cadastrado cadastrado => ', response.data);
         resetarCampos(nomeCompletoInput, dataInput, emailInput, senhaInput);
+        window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
     })
     .catch((error) => {
         console.log('Erro => ', error);
@@ -177,7 +178,6 @@ const validarLogin = () => {
 
     if(cadastroValido) {
         cadastrarUsuario();
-        window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
     }
 }
 // reset de campos
