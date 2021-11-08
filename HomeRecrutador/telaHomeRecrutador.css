@@ -31,52 +31,46 @@ main {
     height: 550px;
     width: 85%;
 }
+#blocoMain{
+    align-items: center;
+    display: flex;
+    flex-direction: column;   
+    width: 100%;
+}
+
 .blocoVagas {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 20px;
     height: 420px;
     width: 80%;
 }
 
-.classVagasHome{
+.vagasHome{
     align-items: center;
     border: 1px black solid;
     border-radius: 3px;
     display: flex;
     flex-direction: row;
     margin-bottom: 15px;
-    height: 20%;
+    height: 30%;
     justify-content: space-between;
 }
 
-.classVagasHome:hover{
+.vagasHome:hover{
     background-color: rgb(184, 181, 181);
 
 }
 
-.classDivTitulo, .classDivRemuneracao{
+#tituloVaga, #remuneracaoVaga{
     margin-left: 5px;
 }
 
-.classSpan{
+#tituloDescricaoVaga{
     display: flex;
     flex-direction: row;
     margin: 0px 10px 0px 10px;
-}
-
-#btnSairHome{
-    color: white;
-    background-color: black;
-    border-radius: 3px;
-    height: 35px;
-    width: 110px;
-}
-
-#naoHaVagas{
-    display: flex;
-    justify-content: center;
-    
 }
 
 #buttons{
@@ -110,6 +104,16 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 70px;
+}
+
+.classDivInputTitulo{
+    /* margin-bottom: 30px; */
+    
+}
+
+.classDivInputDescricao{
+
+
 }
 
 .classDivInputRemuneracao{

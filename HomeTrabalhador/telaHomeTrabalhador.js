@@ -1,14 +1,14 @@
 
-
 const listarVagas = () =>{
 
-    axios.get('http:localhost:3000/vagas')
+ 
+
+    axios.get('http://localhost:3000/vagas')
     .then((response) => {
         let responseData = response.data;
         
         let blocoVagas = document.getElementById('block-Vagas');
         console.log(response);
-
         responseData.forEach(e => {
             let vagasHome = document.createElement('div');
             vagasHome.setAttribute('class', 'classVagasHome');
@@ -49,5 +49,4 @@ const listarVagas = () =>{
     });
     
 }
-
 listarVagas()
