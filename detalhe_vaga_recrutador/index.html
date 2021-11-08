@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./app.css">
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -17,10 +19,12 @@
 
         <section class="job_info">
             <div class="job_info_content">
-                <p><span class="content_title">Título:</span> Desenvolvedor Full-Stack</p>
-                <p><span class="content_title">Descrição:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis, ea tempora totam aliquam, quidem earum ut quia laudantium!
+                <p><span class="content_title">Título:</span> <span id="titulo">Desenvolvedor Full-Stack</span></p>
+                <p><span class="content_title">Descrição:</span> <span id="descricao">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis, ea tempora totam aliquam, quidem earum ut quia laudantium!
+                </span>
                 </p>
-                <p><span class="content_title">Remuneração:</span> R$ 5.500</p>
+                <p><span class="content_title">Remuneração:</span> <span id="remuneracao">R$ 5.500</span></p>
             </div>
         </section>
 
@@ -33,10 +37,10 @@
             </div>
             <div class="candidates">
                 <div class="name">
-                    <h5>Tiago Schmidt</h5>
+                    <h5 id="nome">Tiago Schmidt</h5>
                 </div>
                 <div class="birthdate">
-                    <h5>06/06/1994</h5>
+                    <h5 id="birthday">06/06/1994</h5>
                 </div>
                 <button>Reprovar</button>
             </div>
