@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./paraleloDetalheVagaRecrutador.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <div class="main_title">
@@ -16,11 +18,12 @@
 
         <section class="job_info">
             <div class="job_info_content">
-                <p><span class="content_title">Título:</span> Desenvolvedor Full-Stack</p>
-                <p><span class="content_title">Descrição:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis, ea tempora totam aliquam, quidem earum ut quia laudantium!
+                <p><span class="content_title">Título:</span> <span id="titulo">Desenvolvedor Full-Stack</span></p>
+                <p><span class="content_title">Descrição:</span> <span id="descricao">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse blanditiis, ea tempora totam aliquam, quidem earum ut quia laudantium!
+                </span>
                 </p>
-                <p><span class="content_title">Remuneração:</span> R$ 5.500</p>
-            </div>
+                <p><span class="content_title">Remuneração:</span> <span id="remuneracao">R$ 5.500</span></p>
         </section>
 
         <h2>Candidatos na Vaga</h2>

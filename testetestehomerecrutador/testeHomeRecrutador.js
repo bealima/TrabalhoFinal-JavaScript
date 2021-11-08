@@ -62,10 +62,11 @@ const listarVagas = () =>{
 listarVagas()
 
 
-const direcionarDetalheVaga = (id) =>{
-    window.location.href = '../paraleloDetalhamentoVagaRecrutador/paraleloDetalheVagaRecrutador.html'
-
-    console.log(id)
+const direcionarDetalheVaga = async (id) =>{
+    console.log('Testing')
+    await axios.put('http://localhost:3000/idVagaAtual/0', {idAtual:id})
+        window.location.href = '../paraleloDetalhamentoVagaRecrutador/paraleloDetalheVagaRecrutador.html'
+        
 }
 
 const abrirTelacadastroVaga = () => {
