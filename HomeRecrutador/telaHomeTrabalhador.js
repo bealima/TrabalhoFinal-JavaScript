@@ -1,3 +1,7 @@
+const backPage = () => {
+    window.location.href = "/Aula 10/TrabalhoFinal-JavaScript/HomeRecrutador/telaHomeTrabalhador.html"
+}
+
 
 const listarVagas = () =>{
 
@@ -115,6 +119,7 @@ const telaCadastroVaga = () => {
     btnSairTelaCadastroVaga.setAttribute('class', 'classBtnSairTelaCadastroVaga');
     btnSairTelaCadastroVaga.innerText = 'Voltar'
     divButtonsCadastrarVagas.appendChild(btnSairTelaCadastroVaga);
+    btnSairTelaCadastroVaga.addEventListener('click', backPage)
 
     let btnCadastrarTelaCadastroVaga = document.createElement('button');
     btnCadastrarTelaCadastroVaga.setAttribute('class', 'classBtnCadastrarTelaCadastroVaga');
@@ -148,6 +153,10 @@ const telaCadastroVaga = () => {
     btnCadastrarTelaCadastroVaga.addEventListener('click', cadastrarVaga);
     
     
+}
+
+const changePage = () => {
+    window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
 }
 
 abrirTelacadastroVaga()

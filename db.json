@@ -1,4 +1,26 @@
 {
+  "usuarios": [
+    {
+      "tipo": "1",
+      "nome": "Augusto C",
+      "dataNascimento": "1998-03-04",
+      "email": "augusto.citton@gmail.com",
+      "senha": "12345@aA",
+      "primeiroEmprego": "true",
+      "candidaturas": [],
+      "id": 1
+    },
+    {
+      "tipo": "2",
+      "nome": "Jorger Almeida",
+      "dataNascimento": "1999-03-04",
+      "email": "jorge@gmail.com",
+      "senha": "12345@Aa",
+      "primeiroEmprego": "false",
+      "candidaturas": [],
+      "id": 2
+    }
+  ],
   "vagas": [
     {
       "titulo": "ohoihoihoih",
@@ -28,6 +50,41 @@
       "remuneracao": "ooooooooo",
       "candidatos": [],
       "id": 4
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "remuneracao": "",
+      "candidatos": [],
+      "id": 5
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "remuneracao": "",
+      "candidatos": [],
+      "id": 6
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "remuneracao": "",
+      "candidatos": [],
+      "id": 7
+    },
+    {
+      "titulo": "",
+      "descricao": "",
+      "remuneracao": "",
+      "candidatos": [],
+      "id": 8
+    },
+    {
+      "titulo": "asasas",
+      "descricao": "asdasdasdasd",
+      "remuneracao": "1233333",
+      "candidatos": [],
+      "id": 9
     }
   ]
 }

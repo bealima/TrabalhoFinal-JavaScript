@@ -29,7 +29,7 @@
 
             <div class="name-input">
                 <span>Nome Completo*</span>
-                <input type="text" id="nome-completo-input-cadastro" onkeyup="validarNome()" value='Augusto Citton'>
+                <input type="text" id="nome-completo-input-cadastro" onkeyup="validarNome()" >
                 <span id="nome-completo-cadastro-erro" style="display: none;">Nome inválido</span>
             </div>
 
@@ -41,14 +41,13 @@
 
             <div class="email-input">
                 <span>Email*</span>
-                <input type="email" id="email-input-cadastro"  onkeyup="validarEmail()" title="Email" value="aa@bb.cc">
-                <span id="email-cadastro-erro" style="display: none;" >Email inválido</span>
+                <input type="email" id="email-input-cadastro" onkeyup="validarEmail()" title="Email" >
+                <span id="email-cadastro-erro" style="display: none;">Email inválido</span>
             </div>
 
             <div class="password-input">
                 <span>Senha*</span>
-                <input type="password" id="password-input-cadastro" onkeyup="validarSenha()"
-                title="Necessário ter uma letra maiúscula, uma letra minúscula, um caracter especial, um número e no mínimo 8 dígitos" value="12345@Aa">
+                <input type="password" id="password-input-cadastro" onkeyup="validarSenha()" title="Necessário ter uma letra maiúscula, uma letra minúscula, um caracter especial, um número e no mínimo 8 dígitos" >
                 <span id="senha-invalida-cadastro" style="display: none;">Senha inválida, exemplo de senha válida: "12345@Ab"</span>
             </div>
 
@@ -60,7 +59,7 @@
                 <button type="button" onclick="changePage()">Voltar</button>
                 <button type="button" onclick="validarLogin()">Cadastrar</button>
             </div>
-
+            <a></a>
 
         </form>
 
