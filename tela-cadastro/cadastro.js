@@ -177,6 +177,7 @@ const validarLogin = () => {
 
     if(cadastroValido) {
         cadastrarUsuario();
+        window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
     }
 }
 // reset de campos
