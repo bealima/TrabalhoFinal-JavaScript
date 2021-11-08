@@ -1,183 +1,20 @@
 {
-    "vagas": [{
-            "titulo": "",
-            "descricao": "",
-            "remuneracao": "",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 1
-        },
-        {
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 2
-        },
-        {
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 3
-        },
-        {
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 4
-        },
-        {
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 5
-        },
-        {
-            "titulo": "rzrezrezrez",
-            "remuneracao": "rezrezrez",
-            "descricao": "rezrezrez",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 6
-        },
-        {
-            "titulo": "iugiug",
-            "remuneracao": "iugiug",
-            "descricao": "iugiug",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 7
-        },
-        {
-            "titulo": "ass. adm",
-            "remuneracao": "R$ 1200,00",
-            "descricao": "Atendimento ao cliente.",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 8
-        },
-        {
-            "titulo": "",
-            "remuneracao": "",
-            "descricao": "",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 9
-        },
-        {
-            "titulo": "",
-            "remuneracao": "",
-            "descricao": "",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 10
-        },
-        {
-            "titulo": "",
-            "remuneracao": "",
-            "descricao": "",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 11
-        },
-        {
-            "titulo": "Assistente Administrativo",
-            "remuneracao": "R$ 1200,00",
-            "descricao": "Atendimento ao cliente.",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 12
-        },
-        {
-            "titulo": "Desenvolvedor Flutter",
-            "remuneracao": "R$ 3200,00",
-            "descricao": "Trabalho envolverá desenvolver aplicações escaláveis e de grande porte.",
-            "candidatos": [{
-                "nome": "DEIVERSON CRUZ BAHIA",
-                "dataNascimento": "2021-11-25",
-                "email": "dcruzbhha2@gmail.com",
-                "senha": "fV#56m0*",
-                "primeiroEmprego": false,
-                "tipoUsuario": "1",
-                "vagasCadastradas": [],
-                "id": 1
-            }],
-            "rejeitado": false,
-            "id": 13
-        },
-        {
-            "titulo": "Assistente Administrativo",
-            "remuneracao": "R$ 1200,00",
-            "descricao": "Atendimento ao cliente.",
-            "candidatos": [],
-            "rejeitado": false,
-            "id": 14
-        }
-    ],
-    "usuarios": [{
-            "nome": "DEIVERSON CRUZ BAHIA",
-            "dataNascimento": "2021-11-25",
-            "email": "dcruzbhha2@gmail.com",
-            "senha": "fV#56m0*",
-            "primeiroEmprego": false,
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 1
-        },
-        {
-            "nome": "DEIVERSON CRUZ BAHIA",
-            "dataNascimento": "2021-11-19",
-            "email": "dcruzbhha2@gmail.com",
-            "senha": "fV#56m0*",
-            "primeiroEmprego": "true",
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 2
-        },
-        {
-            "nome": "DEIVERSON CRUZ BAHIA",
-            "dataNascimento": "2021-11-19",
-            "email": "dcruzbhha2@gmail.com",
-            "senha": "fV#56m0*",
-            "primeiroEmprego": "false",
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 3
-        },
-        {
-            "nome": "Augusto Citton",
-            "dataNascimento": "1997-06-10",
-            "email": "aa@bb.cc",
-            "senha": "12345@Aa",
-            "primeiroEmprego": "false",
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 4
-        },
-        {
-            "nome": "Augusto Citton",
-            "dataNascimento": "1995-06-07",
-            "email": "aa@bb.cc",
-            "senha": "12345@Aa",
-            "primeiroEmprego": "false",
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 5
-        },
-        {
-            "nome": "Carlos Auberto",
-            "dataNascimento": "1979-02-07",
-            "email": "carlos.alberto@gmail.com",
-            "senha": "Carlos@80",
-            "primeiroEmprego": "false",
-            "tipoUsuario": "2",
-            "vagasCadastradas": [],
-            "id": 6
-        },
-        {
-            "nome": "Augusto Citton",
-            "dataNascimento": "2000-02-01",
-            "email": "aa@bb.cc",
-            "senha": "12345@Aa",
-            "primeiroEmprego": "false",
-            "tipoUsuario": "1",
-            "vagasCadastradas": [],
-            "id": 7
-        }
-    ]
+  "vagas": [
+    {
+      "titulo": "oihoihfosihoighdoigh",
+      "remuneracao": "1200000",
+      "descricao": "hfhfosihgodghdogh",
+      "candidatos": [],
+      "rejeitado": false,
+      "id": 1
+    },
+    {
+      "titulo": "uahuahuahuahauhauhau",
+      "remuneracao": "12000000",
+      "descricao": "uhsivhsiuhgidughiduhifuhifuhifuh",
+      "candidatos": [],
+      "rejeitado": false,
+      "id": 2
+    }
+  ]
 }
