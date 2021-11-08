@@ -52,10 +52,7 @@ const listarVagas = () =>{
     
 }
 listarVagas()
-<<<<<<< HEAD
-=======
 
 const changePage = () => {
     window.location.href = '/Aula 10/TrabalhoFinal-JavaScript/tela-login/Login.html'
 }
->>>>>>> branch-Augusto
